@@ -9,9 +9,14 @@ export default function Hero() {
   return (
     <div className="relative mx-auto my-10 flex max-w-7xl flex-col items-center justify-center">
       <div className="px-4 py-10 md:py-20">
-        <div className="flex justify-center items-center">
+        <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="flex justify-center items-center">
         <AnimatedGradientTextDemo />
-        </div>
+        </motion.div>
         
         <h1 className="relative z-10 mx-auto max-w-5xl text-center text-5xl font-bold text-foreground md:text-4xl lg:text-5xl xl:text-6xl">
           {"Websites That Actually Work."
