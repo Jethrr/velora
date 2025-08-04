@@ -1,6 +1,5 @@
 "use client"
 import Hero from "@/components/Hero";
-import { Nav } from "@/components/Nav";
 import { Bento } from "@/components/Bento";
 import WhyChooseVelora from "@/components/WhyChooseVelora";
 import OurWork from "@/components/OurWork";

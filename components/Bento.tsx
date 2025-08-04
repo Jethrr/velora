@@ -3,16 +3,10 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import {
-  IconBoxAlignRightFilled,
   IconSearch,
-        IconChartBar,
-  IconClipboardCopy,
-  IconFileBroken,
+  IconChartBar,
   IconDeviceDesktop, 
   IconMessageCircle,
-  IconSignature,
-  IconTableColumn,
-  IconTools,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 
