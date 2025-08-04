@@ -1,0 +1,201 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-open-sans);
+  --font-mono: var(--font-montserrat);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+
+
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+ 
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+
+  --animate-gradient: gradient 8s linear infinite
+;
+  @keyframes gradient {
+  to {
+    background-position: var(--bg-size, 300%) 0;}}
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  @keyframes marquee {
+  from {
+    transform: translateX(0);}
+  to {
+    transform: translateX(calc(-100% - var(--gap)));}}
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);}
+  to {
+    transform: translateY(calc(-100% - var(--gap)));}}}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Velora Brand Colors */
+  --velora-midnight-blue: #1A1F36;
+  --velora-soft-sky: #E6F0FA;
+  --velora-accent-teal: #3EB2FF;
+  --velora-light-gray: #F5F7FA;
+  --velora-white: #FFFFFF;
+
+  /* Updated color system using Velora palette */
+  --background: var(--velora-soft-sky);
+  --foreground: var(--velora-midnight-blue);
+  --card: var(--velora-white);
+  --card-foreground: var(--velora-midnight-blue);
+  --popover: var(--velora-white);
+  --popover-foreground: var(--velora-midnight-blue);
+  --primary: var(--velora-accent-teal);
+  --primary-foreground: var(--velora-white);
+  --secondary: var(--velora-light-gray);
+  --secondary-foreground: var(--velora-midnight-blue);
+  --muted: var(--velora-light-gray);
+  --muted-foreground: #6B7280;
+  --accent: var(--velora-accent-teal);
+  --accent-foreground: var(--velora-white);
+  --destructive: #EF4444;
+  --border: #E5E7EB;
+  --input: #E5E7EB;
+  --ring: var(--velora-accent-teal);
+  --chart-1: var(--velora-accent-teal);
+  --chart-2: var(--velora-midnight-blue);
+  --chart-3: #10B981;
+  --chart-4: #F59E0B;
+  --chart-5: #EF4444;
+  --sidebar: var(--velora-white);
+  --sidebar-foreground: var(--velora-midnight-blue);
+  --sidebar-primary: var(--velora-accent-teal);
+  --sidebar-primary-foreground: var(--velora-white);
+  --sidebar-accent: var(--velora-light-gray);
+  --sidebar-accent-foreground: var(--velora-midnight-blue);
+  --sidebar-border: #E5E7EB;
+  --sidebar-ring: var(--velora-accent-teal);
+}
+
+.dark {
+  --background: var(--velora-midnight-blue);
+  --foreground: var(--velora-white);
+  --card: #2D3748;
+  --card-foreground: var(--velora-white);
+  --popover: #2D3748;
+  --popover-foreground: var(--velora-white);
+  --primary: var(--velora-accent-teal);
+  --primary-foreground: var(--velora-white);
+  --secondary: #4A5568;
+  --secondary-foreground: var(--velora-white);
+  --muted: #4A5568;
+  --muted-foreground: #A0AEC0;
+  --accent: var(--velora-accent-teal);
+  --accent-foreground: var(--velora-white);
+  --destructive: #FC8181;
+  --border: #4A5568;
+  --input: #4A5568;
+  --ring: var(--velora-accent-teal);
+  --chart-1: var(--velora-accent-teal);
+  --chart-2: #81E6D9;
+  --chart-3: #FBD38D;
+  --chart-4: #FC8181;
+  --chart-5: #F687B3;
+  --sidebar: #2D3748;
+  --sidebar-foreground: var(--velora-white);
+  --sidebar-primary: var(--velora-accent-teal);
+  --sidebar-primary-foreground: var(--velora-white);
+  --sidebar-accent: #4A5568;
+  --sidebar-accent-foreground: var(--velora-white);
+  --sidebar-border: #4A5568;
+  --sidebar-ring: var(--velora-accent-teal);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-open-sans), 'Open Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+}
+
+/* Custom Velora utility classes */
+@layer utilities {
+  .velora-gradient {
+    background: linear-gradient(135deg, var(--velora-accent-teal) 0%, #1E40AF 100%);
+  }
+
+  .velora-shadow {
+    box-shadow: 0 10px 25px -5px rgba(62, 178, 255, 0.1), 0 10px 10px -5px rgba(62, 178, 255, 0.04);
+  }
+
+  .velora-text-gradient {
+    background: linear-gradient(135deg, var(--velora-accent-teal) 0%, #1E40AF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
