@@ -55,10 +55,7 @@ export function Nav() {
   return (
     <NavigationMenu viewport={false}>
       <NavigationMenuList>
-      
-
-
-      
+    
         <NavigationMenuItem>
           <NavigationMenuTrigger>Service</NavigationMenuTrigger>
           <NavigationMenuContent>

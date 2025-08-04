@@ -49,13 +49,13 @@ export default function WhyChooseVelora() {
           viewport={{ once: true }}
           className="text-center mb-20 w-full"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1A1F36] mb-6">
+          <h2 className="text-3xl  md:text-4xl lg:text-5xl font-bold text-[#1A1F36] mb-2">
             Why Choose Velora?
           </h2>
-          <p className="text-2xl font-semibold text-[#3EB2FF] mb-4">
+          <p className="text-xl md:text-2xl lg:text-5xl  font-semibold text-[#3EB2FF] mb-2">
             Built for small businesses. Focused on results.
           </p>
-          <p className="text-xl text-[#1A1F36]/70 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-md text-[#1A1F36]/70 max-w-3xl mx-auto leading-relaxed">
             We don't just build websites—we build business growth engines.
           </p>
         </motion.div>

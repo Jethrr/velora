@@ -97,7 +97,7 @@ export default function OurWork() {
           </div>
           
           <span 
-            className=" flex items-center justify-center outline-1- transition-all duration-200 text-[#3EB2FF] hover:underline cursor-pointer"
+            className="hidden md:flex items-center justify-center outline-1- transition-all duration-200 text-[#3EB2FF] hover:underline cursor-pointer"
           >
              More
             <ArrowRight className="h-4 w-4 ml-2" />
@@ -263,6 +263,11 @@ export default function OurWork() {
                   <Star className="text-[#3EB2FF] h-4 w-4" /> <Star className="text-[#3EB2FF] h-4 w-4" /> <Star className="text-[#3EB2FF] h-4 w-4" /> <Star className="text-[#3EB2FF] h-4 w-4" /> <Star className="text-[#3EB2FF] h-4 w-4" />
                 </div>
               </div>
+            </div>
+
+            <div className="flex justify-center">
+              <p className="text-lg font-bold text-[#1A1F36]"> - Jordan A.</p>
+              <p className="text-lg font-bold text-[#1A1F36]">Cafe Owner</p>
             </div>
 
           
