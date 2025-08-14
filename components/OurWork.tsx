@@ -265,10 +265,10 @@ export default function OurWork() {
               </div>
             </div>
 
-            <div className="flex justify-center">
-              <p className="text-lg font-bold text-[#1A1F36]"> - Jordan A.</p>
-              <p className="text-lg font-bold text-[#1A1F36]">Cafe Owner</p>
-            </div>
+                         <div className="flex flex-col items-center space-y-1">
+               <p className="text-lg font-bold text-[#1A1F36]"> - Jordan A. </p>
+               <p className="text-sm font-medium text-[#1A1F36]/70"> Cafe Owner</p>
+             </div>
 
           
           </div>

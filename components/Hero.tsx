@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, MessageCircle, Rocket } from "lucide-react";
 import FeaturesSectionDemo from "./features-section-demo-2";
-import { AnimatedGradientTextDemo } from "./AnimatedGradientTextDemo";
 export default function Hero() {
   return (
     <div className="relative mx-auto my-10 flex max-w-7xl flex-col items-center justify-center">
@@ -15,7 +14,6 @@ export default function Hero() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
         className="flex justify-center items-center">
-        <AnimatedGradientTextDemo />
         </motion.div>
         
         <h1 className="relative z-10 mx-auto max-w-5xl text-center text-5xl font-bold text-foreground md:text-4xl lg:text-5xl xl:text-6xl">

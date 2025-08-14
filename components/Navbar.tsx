@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from './ui/button'
 
 export default function Navbar() {
@@ -25,7 +26,14 @@ export default function Navbar() {
       transition={{ duration: 0.5 }}
       className="navbar sticky top-0 bg-background z-50 w-full flex justify-between items-center px-4 py-6 max-w-7xl mx-auto"
     >
-      <div className="logo">
+      <div className="logo flex items-center gap-3">
+        <Image 
+          src="/logo.png" 
+          alt="Velora Logo" 
+          width={40} 
+          height={40} 
+          className="cursor-pointer"
+        />
         <div className="text-2xl md:text-3xl font-extrabold text-[#1A1F36] cursor-pointer">
           Velora
         </div>
