@@ -274,83 +274,65 @@ const SkeletonThree = () => {
 };
 
 const SkeletonFour = () => {
-  const first = {
-    initial: {
-      x: 20,
-      rotate: -5,
-    },
-    hover: {
-      x: 0,
-      rotate: 0,
-    },
-  };
-  const second = {
-    initial: {
-      x: -20,
-      rotate: 5,
-    },
-    hover: {
-      x: 0,
-      rotate: 0,
-    },
-  };
   return (
     <motion.div
-      initial="initial"
-      animate="animate"
-      whileHover="hover"
       className="flex flex-1 w-full h-full min-h-[6rem] bg-dot-[#3EB2FF]/20 p-2"
     >
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 w-full h-full">
-        <motion.div
-          variants={first}
-          className="rounded-2xl bg-white p-3 sm:p-4 border border-[#E6F0FA] flex flex-col items-center justify-center"
-        >
-          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-[#3EB2FF] to-[#2A9BFF] flex items-center justify-center">
-            <IconStar className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+      <div className="w-full h-full bg-white rounded-2xl border border-[#E6F0FA] p-4 sm:p-6">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 h-full">
+          {/* Reviews Section */}
+g          <div className="flex items-center gap-3 sm:gap-4">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-[#3EB2FF] to-[#2A9BFF] flex-shrink-0 flex items-center justify-center">
+              <IconStar className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+            </div>
+            <div className="flex flex-col">
+              <p className="text-sm sm:text-base font-semibold text-[#1A1F36]">
+                Customer Reviews
+              </p>
+              <p className="text-[10px] sm:text-xs text-[#3EB2FF] bg-[#E6F0FA] rounded-full px-2 py-0.5 mt-1 inline-block">
+                ⭐⭐⭐⭐⭐
+              </p>
+            </div>
           </div>
-          <p className="text-[10px] sm:text-sm text-center font-semibold text-[#1A1F36] mt-2 sm:mt-4">
-            Customer Reviews
-          </p>
-          <div className="flex items-center mt-2 sm:mt-4">
-            <p className="border border-[#3EB2FF] bg-[#E6F0FA] text-[#3EB2FF] text-[10px] sm:text-xs rounded-full px-2 py-0.5">
-              ⭐⭐⭐⭐⭐
-            </p>
-          </div>
-        </motion.div>
 
-        <motion.div 
-          className="relative z-20 rounded-2xl bg-white p-3 sm:p-4 border border-[#E6F0FA] flex flex-col items-center justify-center"
-        >
-          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-[#3EB2FF] to-[#2A9BFF] flex items-center justify-center">
-            <IconMessageCircle className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
-          </div>
-          <p className="text-[10px] sm:text-sm text-center font-semibold text-[#1A1F36] mt-2 sm:mt-4">
-            Testimonials
-          </p>
-          <div className="flex items-center mt-2 sm:mt-4">
-            <p className="border border-[#3EB2FF] bg-[#E6F0FA] text-[#3EB2FF] text-[10px] sm:text-xs rounded-full px-2 py-0.5">
-              Real Stories
-            </p>
-          </div>
-        </motion.div>
+          {/* Divider */}
+          <div className="hidden sm:block w-px h-full bg-[#E6F0FA]" />
+          <div className="block sm:hidden w-full h-px bg-[#E6F0FA]" />
 
-        <motion.div
-          variants={second}
-          className="rounded-2xl bg-white p-3 sm:p-4 border border-[#E6F0FA] flex flex-col items-center justify-center"
-        >
-          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-[#3EB2FF] to-[#2A9BFF] flex items-center justify-center">
-            <IconUsers className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+          {/* Testimonials Section */}
+          <div className="flex items-center gap-3 sm:gap-4">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-[#3EB2FF] to-[#2A9BFF] flex-shrink-0 flex items-center justify-center">
+              <IconMessageCircle className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+            </div>
+            <div className="flex flex-col">
+              <p className="text-sm sm:text-base font-semibold text-[#1A1F36]">
+                Testimonials
+              </p>
+              <p className="text-[10px] sm:text-xs text-[#3EB2FF] bg-[#E6F0FA] rounded-full px-2 py-0.5 mt-1 inline-block">
+                Real Stories
+              </p>
+            </div>
           </div>
-          <p className="text-[10px] sm:text-sm text-center font-semibold text-[#1A1F36] mt-2 sm:mt-4">
-            Social Proof
-          </p>
-          <div className="flex items-center mt-2 sm:mt-4">
-            <p className="border border-[#3EB2FF] bg-[#E6F0FA] text-[#3EB2FF] text-[10px] sm:text-xs rounded-full px-2 py-0.5">
-              Trust Signals
-            </p>
+
+          {/* Divider */}
+          <div className="hidden sm:block w-px h-full bg-[#E6F0FA]" />
+          <div className="block sm:hidden w-full h-px bg-[#E6F0FA]" />
+
+          {/* Social Proof Section */}
+          <div className="flex items-center gap-3 sm:gap-4">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-[#3EB2FF] to-[#2A9BFF] flex-shrink-0 flex items-center justify-center">
+              <IconUsers className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+            </div>
+            <div className="flex flex-col">
+              <p className="text-sm sm:text-base font-semibold text-[#1A1F36]">
+                Social Proof
+              </p>
+              <p className="text-[10px] sm:text-xs text-[#3EB2FF] bg-[#E6F0FA] rounded-full px-2 py-0.5 mt-1 inline-block">
+                Trust Signals
+              </p>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </motion.div>
   );
