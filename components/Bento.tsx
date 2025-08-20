@@ -281,7 +281,7 @@ const SkeletonFour = () => {
       <div className="w-full h-full bg-white rounded-2xl border border-[#E6F0FA] p-4 sm:p-6">
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 h-full">
           {/* Reviews Section */}
-g          <div className="flex items-center gap-3 sm:gap-4">
+         <div className="flex items-center gap-3 sm:gap-4">
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-[#3EB2FF] to-[#2A9BFF] flex-shrink-0 flex items-center justify-center">
               <IconStar className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
             </div>
