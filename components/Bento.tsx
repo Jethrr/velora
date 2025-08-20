@@ -41,23 +41,12 @@ export function Bento() {
 const SkeletonOne = () => {
   const variants = {
     initial: {
-      x: 0,
+      y: 0,
+      scale: 1,
     },
     animate: {
-      x: 10,
-      rotate: 5,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
-  const variantsSecond = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: -10,
-      rotate: -5,
+      y: -5,
+      scale: 1.02,
       transition: {
         duration: 0.2,
       },
@@ -68,35 +57,66 @@ const SkeletonOne = () => {
     <motion.div
       initial="initial"
       whileHover="animate"
-      className="flex flex-1 w-full h-full min-h-[6rem] bg-dot-[#3EB2FF]/20 flex-col space-y-2"
+      className="flex flex-1 w-full h-full min-h-[6rem] bg-dot-[#3EB2FF]/20 flex-col space-y-3 p-2"
     >
-      {/* Website Header */}
+      {/* Browser Window */}
       <motion.div
         variants={variants}
-        className="flex flex-row rounded-lg border border-[#E6F0FA] p-2 items-center space-x-2 bg-white"
+        className="flex flex-col rounded-xl border-2 border-[#E6F0FA] bg-white overflow-hidden h-full"
       >
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-[#3EB2FF] to-[#2A9BFF] shrink-0" />
-        <div className="w-full bg-[#F5F7FA] h-4 rounded-full" />
-        <div className="w-8 h-4 bg-[#3EB2FF] rounded" />
-      </motion.div>
-      
-      {/* Hero Section */}
-      <motion.div
-        variants={variantsSecond}
-        className="flex flex-col rounded-lg border border-[#E6F0FA] p-3 space-y-2 bg-white"
-      >
-        <div className="w-3/4 bg-[#F5F7FA] h-3 rounded-full" />
-        <div className="w-1/2 bg-[#F5F7FA] h-2 rounded-full" />
-        <div className="w-16 h-6 bg-[#3EB2FF] rounded" />
-      </motion.div>
-      
-      {/* Content Section */}
-      <motion.div
-        variants={variants}
-        className="flex flex-row rounded-lg border border-[#E6F0FA] p-2 items-center space-x-2 bg-white"
-      >
-        <div className="w-8 h-8 rounded bg-gradient-to-r from-[#3EB2FF] to-[#2A9BFF] shrink-0" />
-        <div className="w-full bg-[#F5F7FA] h-4 rounded-full" />
+        {/* Browser Header */}
+        <div className="flex items-center px-3 py-2 bg-[#F5F7FA] border-b border-[#E6F0FA]">
+          <div className="flex space-x-1.5">
+            <div className="w-2.5 h-2.5 rounded-full bg-[#FF5F57]" />
+            <div className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]" />
+            <div className="w-2.5 h-2.5 rounded-full bg-[#28C840]" />
+          </div>
+          <div className="flex-1 flex justify-center">
+            <div className="w-1/2 h-4 bg-white rounded-full flex items-center justify-center px-2 text-[8px] text-[#1A1F36]">www.yoursite.com</div>
+          </div>
+        </div>
+
+        {/* Website Content */}
+        <div className="flex flex-col p-3 space-y-3">
+          {/* Navigation */}
+          <div className="flex justify-between items-center">
+            <div className="h-6 w-6 rounded bg-gradient-to-r from-[#3EB2FF] to-[#2A9BFF]" />
+            <div className="hidden sm:flex space-x-2">
+              <div className="w-8 h-2 bg-[#F5F7FA] rounded-full" />
+              <div className="w-8 h-2 bg-[#F5F7FA] rounded-full" />
+              <div className="w-8 h-2 bg-[#F5F7FA] rounded-full" />
+            </div>
+            <div className="w-12 h-4 bg-[#3EB2FF] rounded-full" />
+          </div>
+
+          {/* Hero Section */}
+          <div className="flex flex-col space-y-2 py-2">
+            <div className="w-3/4 h-3 bg-[#F5F7FA] rounded-full" />
+            <div className="w-1/2 h-2 bg-[#F5F7FA] rounded-full" />
+            <div className="flex space-x-2 mt-2">
+              <div className="w-20 h-6 bg-[#3EB2FF] rounded-lg" />
+              <div className="w-20 h-6 border-2 border-[#E6F0FA] rounded-lg" />
+            </div>
+          </div>
+
+          {/* Features Grid */}
+          <div className="grid grid-cols-2 gap-2">
+            <div className="flex items-center space-x-2 p-2 bg-[#F5F7FA] rounded-lg">
+              <div className="w-4 h-4 rounded bg-[#3EB2FF]" />
+              <div className="w-full h-2 bg-white rounded-full" />
+            </div>
+            <div className="flex items-center space-x-2 p-2 bg-[#F5F7FA] rounded-lg">
+              <div className="w-4 h-4 rounded bg-[#3EB2FF]" />
+              <div className="w-full h-2 bg-white rounded-full" />
+            </div>
+          </div>
+
+          {/* Content Section */}
+          <div className="flex space-x-3">
+            <div className="w-1/2 h-12 bg-[#F5F7FA] rounded-lg" />
+            <div className="w-1/2 h-12 bg-[#F5F7FA] rounded-lg" />
+          </div>
+        </div>
       </motion.div>
     </motion.div>
   );
@@ -279,47 +299,59 @@ const SkeletonFour = () => {
       initial="initial"
       animate="animate"
       whileHover="hover"
-      className="flex flex-1 w-full h-full min-h-[6rem] bg-dot-[#3EB2FF]/20 flex-row space-x-2"
+      className="flex flex-1 w-full h-full min-h-[6rem] bg-dot-[#3EB2FF]/20 p-2"
     >
-      <motion.div
-        variants={first}
-        className="h-full w-1/3 rounded-2xl bg-white p-4 border border-[#E6F0FA] flex flex-col items-center justify-center"
-      >
-        <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#3EB2FF] to-[#2A9BFF] flex items-center justify-center">
-          <IconStar className="h-5 w-5 text-white" />
-        </div>
-        <p className="sm:text-sm text-xs text-center font-semibold text-[#1A1F36] mt-4">
-          Customer Reviews
-        </p>
-        <p className="border border-[#3EB2FF] bg-[#E6F0FA] text-[#3EB2FF] text-xs rounded-full px-2 py-0.5 mt-4">
-          ⭐⭐⭐⭐⭐
-        </p>
-      </motion.div>
-      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 border border-[#E6F0FA] flex flex-col items-center justify-center">
-        <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#3EB2FF] to-[#2A9BFF] flex items-center justify-center">
-          <IconMessageCircle className="h-5 w-5 text-white" />
-        </div>
-        <p className="sm:text-sm text-xs text-center font-semibold text-[#1A1F36] mt-4">
-          Testimonials
-        </p>
-        <p className="border border-[#3EB2FF] bg-[#E6F0FA] text-[#3EB2FF] text-xs rounded-full px-2 py-0.5 mt-4">
-          Real Stories
-        </p>
-      </motion.div>
-      <motion.div
-        variants={second}
-        className="h-full w-1/3 rounded-2xl bg-white p-4 border border-[#E6F0FA] flex flex-col items-center justify-center"
-      >
-        <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#3EB2FF] to-[#2A9BFF] flex items-center justify-center">
-          <IconUsers className="h-5 w-5 text-white" />
-        </div>
-        <p className="sm:text-sm text-xs text-center font-semibold text-[#1A1F36] mt-4">
-          Social Proof
-        </p>
-        <p className="border border-[#3EB2FF] bg-[#E6F0FA] text-[#3EB2FF] text-xs rounded-full px-2 py-0.5 mt-4">
-          Trust Signals
-        </p>
-      </motion.div>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 w-full h-full">
+        <motion.div
+          variants={first}
+          className="rounded-2xl bg-white p-3 sm:p-4 border border-[#E6F0FA] flex flex-col items-center justify-center"
+        >
+          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-[#3EB2FF] to-[#2A9BFF] flex items-center justify-center">
+            <IconStar className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+          </div>
+          <p className="text-[10px] sm:text-sm text-center font-semibold text-[#1A1F36] mt-2 sm:mt-4">
+            Customer Reviews
+          </p>
+          <div className="flex items-center mt-2 sm:mt-4">
+            <p className="border border-[#3EB2FF] bg-[#E6F0FA] text-[#3EB2FF] text-[10px] sm:text-xs rounded-full px-2 py-0.5">
+              ⭐⭐⭐⭐⭐
+            </p>
+          </div>
+        </motion.div>
+
+        <motion.div 
+          className="relative z-20 rounded-2xl bg-white p-3 sm:p-4 border border-[#E6F0FA] flex flex-col items-center justify-center"
+        >
+          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-[#3EB2FF] to-[#2A9BFF] flex items-center justify-center">
+            <IconMessageCircle className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+          </div>
+          <p className="text-[10px] sm:text-sm text-center font-semibold text-[#1A1F36] mt-2 sm:mt-4">
+            Testimonials
+          </p>
+          <div className="flex items-center mt-2 sm:mt-4">
+            <p className="border border-[#3EB2FF] bg-[#E6F0FA] text-[#3EB2FF] text-[10px] sm:text-xs rounded-full px-2 py-0.5">
+              Real Stories
+            </p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          variants={second}
+          className="rounded-2xl bg-white p-3 sm:p-4 border border-[#E6F0FA] flex flex-col items-center justify-center"
+        >
+          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-[#3EB2FF] to-[#2A9BFF] flex items-center justify-center">
+            <IconUsers className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+          </div>
+          <p className="text-[10px] sm:text-sm text-center font-semibold text-[#1A1F36] mt-2 sm:mt-4">
+            Social Proof
+          </p>
+          <div className="flex items-center mt-2 sm:mt-4">
+            <p className="border border-[#3EB2FF] bg-[#E6F0FA] text-[#3EB2FF] text-[10px] sm:text-xs rounded-full px-2 py-0.5">
+              Trust Signals
+            </p>
+          </div>
+        </motion.div>
+      </div>
     </motion.div>
   );
 };
